@@ -1,0 +1,33 @@
+{
+  "name": "fluxed",
+  "version": "0.0.0",
+  "description": "Immutable layered data store",
+  "main": "fluxed.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "lint": "jshint fluxed.js src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "sorentwo/fluxed"
+  },
+  "keywords": [
+    "immutable",
+    "data",
+    "model"
+  ],
+  "author": "Parker Selbert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sorentwo/fluxed/issues"
+  },
+  "homepage": "https://github.com/sorentwo/fluxed",
+  "dependencies": {
+    "immutable": "^2.0.3"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "jshint": "^2.5.2",
+    "mocha": "^1.21.3"
+  }
+}
