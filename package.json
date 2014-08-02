@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/sorentwo/fluxed",
   "dependencies": {
+    "es6-promise": "^1.0.0",
     "immutable": "^2.0.3"
   },
   "devDependencies": {
