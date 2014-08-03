@@ -59,7 +59,7 @@ describe('Store', function() {
     it('returns all models in the specified bucket', function() {
       store.add('tags', {id: 1});
 
-      expect(store.all('tags').length).to.eq(1);
+      expect(store.count('tags')).to.eq(1);
     });
   });
 
@@ -92,6 +92,31 @@ describe('Store', function() {
       var foundB = store.some('tags', [1, 2]);
 
       expect(Immutable.is(foundA, foundB)).to.be.true;
+    });
+  });
+
+  describe('#parse', function() {
+    var payload = {
+      authors:  [{ id: 1 }],
+      comments: [{ id: 1 }, { id: 2 }],
+      posts:    [{ id: 1 }, { id: 2 }]
+    }
+
+    it('extracts a payload of rooted arrays into corresponding buckets', function() {
+      store.parse(payload);
+
+      expect(store.count('authors')).to.eq(1);
+      expect(store.count('comments')).to.eq(2);
+      expect(store.count('posts')).to.eq(2);
+    });
+
+    it('emits a single change event after parsing', function() {
+      var listener = sinon.spy();
+
+      store.addChangeListener(listener);
+      store.parse(payload);
+
+      expect(listener.callCount).to.eq(1);
     });
   });
 });
