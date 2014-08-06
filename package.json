@@ -1,15 +1,15 @@
 {
-  "name": "fluxed",
+  "name": "immunid",
   "version": "0.0.0",
   "description": "Immutable layered data store",
-  "main": "fluxed.js",
+  "main": "immunid.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "lint": "jshint fluxed.js src/*.js"
+    "lint": "jshint lib/*"
   },
   "repository": {
     "type": "git",
-    "url": "sorentwo/fluxed"
+    "url": "sorentwo/immunid"
   },
   "keywords": [
     "immutable",
@@ -19,9 +19,9 @@
   "author": "Parker Selbert",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sorentwo/fluxed/issues"
+    "url": "https://github.com/sorentwo/immunid/issues"
   },
-  "homepage": "https://github.com/sorentwo/fluxed",
+  "homepage": "https://github.com/sorentwo/immunid",
   "dependencies": {
     "es6-promise": "^1.0.0",
     "immutable": "^2.0.3"

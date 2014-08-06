@@ -1,7 +1,7 @@
 var React   = require('react');
-var Store   = require('fluxed').Store;
-var Model   = require('fluxed').Model;
-var Request = require('fluxed').Request;
+var Store   = require('immunid').Store;
+var Model   = require('immunid').Model;
+var Request = require('proquest');
 var Routes  = require('react-router').Routes;
 var Route   = require('react-router').Route;
 
@@ -55,7 +55,7 @@ var PostComponent = React.createClass({
     Store.addChangeListener(this._onChange);
 
     Request.get('//posts/' + this.props.id).then(function(payload) {
-      Store.parse(payload);
+      store.parse(payload);
     });
   },
 
