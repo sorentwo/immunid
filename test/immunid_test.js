@@ -1,9 +1,9 @@
 var expect    = require('chai').expect;
 var sinon     = require('sinon');
-var Store     = require('../lib/store');
+var Store     = require('../immunid');
 var Immutable = require('immutable');
 
-describe('Store', function() {
+describe('Immunid', function() {
   var store;
 
   beforeEach(function() {

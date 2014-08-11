@@ -1,6 +1,6 @@
 var EventEmitter = require('events').EventEmitter;
 var Immutable    = require('immutable');
-var merge        = require('./merge');
+var merge        = require('./lib/merge');
 
 var CHANGE_EVENT = 'change';
 
